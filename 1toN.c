@@ -8,5 +8,6 @@ int main(void) {
         i++;
     }
     printf("1부터 %d까지의 합은 %d입니다", n, sum);
+    return 0;
 }
 //2023-04-06
