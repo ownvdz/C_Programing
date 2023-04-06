@@ -10,7 +10,7 @@ int main(void) {
     }
 
     for(int i=0; i<T; i++) {
-        printf("%d\n", a[i] + b[i]);
+        printf("Case #%d: %d + %d = %d\n", i+1, a[i], b[i], a[i] + b[i]);
     }
 
     return 0;
@@ -27,7 +27,7 @@ int main(void) {
 
     for(int i=0; i<T; i++) {
         scanf("%d %d", &a, &b);
-        printf("%d\n", a + b);
+        printf("Case #%d: %d + %d = %d\n", i+1, a, b, a + b);
     }
 
     return 0;
