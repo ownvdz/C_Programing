@@ -12,4 +12,6 @@ int main(void) {
         }
         printf("\n");
     }
+    return 0;
 }
+//2023-05-04
