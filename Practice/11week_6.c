@@ -12,23 +12,23 @@ int main(void) {
 		
 		switch (menu()) {
 			case 1:
-				factorial();			//1À» ÀÔ·ÂÇÏ¸é ÇÔ¼ö factorial ½ÇÇà 
+				factorial();			//1ì„ ì…ë ¥í•˜ë©´ í•¨ìˆ˜ factorial ì‹¤í–‰ 
 				break;
 
 			case 2:
-				sine();					//2¸¦ ÀÔ·ÂÇÏ¸é ÇÔ¼ö sine ½ÇÇà 
+				sine();					//2ë¥¼ ì…ë ¥í•˜ë©´ í•¨ìˆ˜ sine ì‹¤í–‰ 
 				break;
 
 			case 3:
-				logBase10();			//3À» ÀÔ·ÂÇÏ¸é ÇÔ¼ö logBase10 ½ÇÇà 
+				logBase10();			//3ì„ ì…ë ¥í•˜ë©´ í•¨ìˆ˜ logBase10 ì‹¤í–‰ 
 				break;
 		
 			case 7:
-				printf("Á¾·áÇÕ´Ï´Ù.\n");		//7À» ÀÔ·ÂÇÏ¸é Á¾·á 
+				printf("ì¢…ë£Œí•©ë‹ˆë‹¤.\n");		//7ì„ ì…ë ¥í•˜ë©´ ì¢…ë£Œ 
 				return 0;
 
 			default:
-				printf("Àß¸øµÈ ¼±ÅÃÀÔ´Ï´Ù.\n");		//1~7À» ÀÔ·ÂÇÏÁö ¾ÊÀ¸¸é Á¾·á 
+				printf("ì˜ëª»ëœ ì„ íƒì…ë‹ˆë‹¤.\n");		//1~7ì„ ì…ë ¥í•˜ì§€ ì•Šìœ¼ë©´ ì¢…ë£Œ 
 				break;
 		}	
 	}
@@ -36,50 +36,51 @@ int main(void) {
 	return 0;
 }
 
-int menu(void) {			//¸Ş´º È­¸é Ãâ·Â 
+int menu(void) {			//ë©”ë‰´ í™”ë©´ ì¶œë ¥ 
 	int n;
-	printf("1.ÆÑÅä¸®¾ó\n");
-	printf("2.½ÎÀÎ\n");
-	printf("3.·Î±×(base 10)\n");
-	printf("4.Á¦°ö±Ù\n");
-	printf("5.¼ø¿­(nPr)\n");
-	printf("6.Á¶ÇÕ(nCr)\n");
-	printf("7.Á¾·á\n");
-	printf("¼±ÅÃÇØÁÖ¼¼¿ä: ");
+	printf("1.íŒ©í† ë¦¬ì–¼\n");
+	printf("2.ì‹¸ì¸\n");
+	printf("3.ë¡œê·¸(base 10)\n");
+	printf("4.ì œê³±ê·¼\n");
+	printf("5.ìˆœì—´(nPr)\n");
+	printf("6.ì¡°í•©(nCr)\n");
+	printf("7.ì¢…ë£Œ\n");
+	printf("ì„ íƒí•´ì£¼ì„¸ìš”: ");
 	scanf("%d", &n);
 	
 	return n;
 }
 
-void factorial() {			// ÇØ´ç ÇÔ¼ö´Â Á¤¼ö¸¦ ÀÔ·Â¹ŞÀ¸¸é ±× Á¤¼öÀÇ ÆÑÅä¸®¾óÀ» Ãâ·ÂÇÏ´Â ÇÔ¼öÀÌ´Ù 
+void factorial() {			// í•´ë‹¹ í•¨ìˆ˜ëŠ” ì •ìˆ˜ë¥¼ ì…ë ¥ë°›ìœ¼ë©´ ê·¸ ì •ìˆ˜ì˜ íŒ©í† ë¦¬ì–¼ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ì´ë‹¤ 
 	long long n, result=1,i;
-	printf("Á¤¼ö¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%lld", &n);
 	
 	for (i = 1; i <= n; i++) {
 		result = result * i;
 	}
 	
-	printf("°á°ú = %lld\n\n", result);
+	printf("ê²°ê³¼ = %lld\n\n", result);
 }
 
-void sine() {				// ÇØ´ç ÇÔ¼ö´Â Á¤¼ö nÀ» ÀÔ·Â¹ŞÀ¸¸é sin(n)À» Ãâ·ÂÇÏ´Â ÇÔ¼öÀÌ´Ù 
+void sine() {				// í•´ë‹¹ í•¨ìˆ˜ëŠ” ì •ìˆ˜ nì„ ì…ë ¥ë°›ìœ¼ë©´ sin(n)ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ì´ë‹¤ 
 	double a, result;
-	printf("°¢µµ¸¦ ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ê°ë„ë¥¼ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%lf", &a);
 	result = sin(a);
-	printf("°á°ú = %lf\n\n", result);
+	printf("ê²°ê³¼ = %lf\n\n", result);
 }
 
-void logBase10() {			// ÇØ´ç ÇÔ¼ö´Â Á¤¼ö nÀ» ÀÔ·Â¹ŞÀ¸¸é log(n)À» Ãâ·ÂÇÏ´Â ÇÔ¼öÀÌ´Ù
+void logBase10() {			// í•´ë‹¹ í•¨ìˆ˜ëŠ” ì •ìˆ˜ nì„ ì…ë ¥ë°›ìœ¼ë©´ log(n)ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜ì´ë‹¤
 	double a, result;
-	printf("½Ç¼ö°ªÀ» ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("ì‹¤ìˆ˜ê°’ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%lf", &a);
 
 	if (a <= 0.0) {
-		printf("¿À·ù\n");	// 0 ÀÌÇÏÀÇ °ªÀ» ÀÔ·Â¹ŞÀ¸¸é ¿À·ù¸¦ Ãâ·Â
+		printf("ì˜¤ë¥˜\n");	// 0 ì´í•˜ì˜ ê°’ì„ ì…ë ¥ë°›ìœ¼ë©´ ì˜¤ë¥˜ë¥¼ ì¶œë ¥
 	} else {
 		result = log10(a);
-		printf("°á°ú = %lf\n\n", result);
+		printf("ê²°ê³¼ = %lf\n\n", result);
 	} 
 }
+//2023-05-15
