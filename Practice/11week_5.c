@@ -9,22 +9,21 @@ void drawbar(int height);
 int main(void) {
     int degree, y;
 	
-	for (degree = 0; degree <= 180; degree += 10) {				//  sin0 ºÎÅÍ sin180±îÁö¸¦ ¹üÀ§·Î ÇÔ 
-		y = (int)(60 * sin(rad((double)degree)) + 0.5);			// ½ÎÀÎ°ªÀº -1.0¿¡¼­ 1.0ÀÌ¹Ç·Î Á¤¼ö·Î ¹Ý¿Ã¸²ÇÏ¿© ÁõÆø 
-		drawbar(y);			// ½ÎÀÎÇÔ¼öÀÇ y°ª¸¸Å­ º°À» Ãâ·ÂÇÏ±â À§ÇØ ÇÔ¼ö drawbar »ç¿ë 
+	for (degree = 0; degree <= 180; degree += 10) {				//  sin0 ë¶€í„° sin180ê¹Œì§€ë¥¼ ë²”ìœ„ë¡œ í•¨ 
+		y = (int)(60 * sin(rad((double)degree)) + 0.5);			// ì‹¸ì¸ê°’ì€ -1.0ì—ì„œ 1.0ì´ë¯€ë¡œ ì •ìˆ˜ë¡œ ë°˜ì˜¬ë¦¼í•˜ì—¬ ì¦í­ 
+		drawbar(y);			// ì‹¸ì¸í•¨ìˆ˜ì˜ yê°’ë§Œí¼ ë³„ì„ ì¶œë ¥í•˜ê¸° ìœ„í•´ í•¨ìˆ˜ drawbar ì‚¬ìš© 
 	}
 
 	return 0;
 }
 
 double rad(double degree) {
-	return PI * degree / 180.0;			//°¢µµ º¯È¯ 
+	return PI * degree / 180.0;			//ê°ë„ ë³€í™˜ 
 }
 
 void drawbar(int height) {
-	int i;
-	for (i = 0; i < height; i++) {
-		printf("*");			//¹ÞÀº y°ª¸¸Å­ º°À» Ãâ·Â 
+	for (int i = 0; i < height; i++) {
+		printf("*");			//ë°›ì€ yê°’ë§Œí¼ ë³„ì„ ì¶œë ¥ 
 	}
 	printf("\n");
 }						
