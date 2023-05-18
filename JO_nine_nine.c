@@ -18,12 +18,10 @@ int main() {
             for(int j=num1; j>=num2; j--) {
                 printf("%d * %d = %2d   ", j, i, j*i);
             }
-        } else if(num1<num2) {
+        } else {
             for(int j=num1; j<=num2; j++) {
                 printf("%d * %d = %2d   ", j, i, j*i);
             }
-        } else {
-            printf("%d * %d = %2d   ", num1, i, num1*i);
         }
         printf("\n");
     }
